@@ -1,5 +1,5 @@
 function plot_EMG_from_C3D_analytic(subjects, muscles_R, muscles_L, analytic_labels, data_path)
-    % Vérification des entrées
+    % Vérification entrées
     if nargin < 5
         error('Tous les arguments requis doivent être fournis.');
     end
