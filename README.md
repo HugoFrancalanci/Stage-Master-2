@@ -1,7 +1,7 @@
 # STAGE_M2_SYNERGIES
 
 ## Description
-Ce dépôt contient les scripts développés pour analyser les synergies musculaires et la cinématique de l'épaule dans le cadre du stage de Master 2. Il est structuré en trois grands sous-dossiers : **SYNERGY**, **KINEMATIC**, et **COUPLAGE EMG KINEMATIC**.
+Ce dépôt contient les scripts développés pour analyser les synergies musculaires et la cinématique de l'épaule . Il est structuré en trois grands sous-dossiers : **SYNERGY**, **KINEMATIC**, et **COUPLAGE EMG KINEMATIC**.
 
 ---
 
