@@ -38,10 +38,10 @@ Ce sous-dossier comprend trois scripts :
 Ce dossier est divisé en deux sous-dossiers : **angles_extraits_c3d** et **calcul_angles_euler**.
 
 #### (1) angles_extraits_c3d
-- Contient les angles des mouvements analytiques pour un sujet extraits directement à partir des fichiers **C3D**.
+- **`angles_c3d_analytics`** : Contient les angles des mouvements analytiques pour un sujet extraits directement à partir des fichiers **C3D**.
 
 #### (2) calcul_angles_euler
-- Contient les angles calculés avec la méthode d'Euler pour les mouvements fonctionnels d’un sujet.
+- **`main_analyse_kin`** : Contient les angles calculés avec la méthode d'Euler pour les mouvements fonctionnels d’un sujet.
 
 ---
 
@@ -49,4 +49,4 @@ Ce dossier est divisé en deux sous-dossiers : **angles_extraits_c3d** et **calc
 Ce dossier contient un seul sous-dossier :
 
 #### (1) main_couplage
-- Contient un script partiel qui met en corrélation les données **EMG** avec les angles calculés de l’épaule lors des mouvements fonctionnels.
+- **`main_couplage`** :ontient un script partiel qui met en corrélation les données **EMG** avec les angles calculés de l’épaule lors des mouvements fonctionnels.
