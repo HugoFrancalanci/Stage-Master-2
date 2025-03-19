@@ -49,4 +49,4 @@ Ce dossier est divisé en deux sous-dossiers : **angles_extraits_c3d** et **calc
 Ce dossier contient un seul sous-dossier :
 
 #### (1) main_couplage
-- **`main_couplage`** :ontient un script partiel qui met en corrélation les données **EMG** avec les angles calculés de l’épaule lors des mouvements fonctionnels.
+- **`main_couplage`** : Contient un script partiel qui met en corrélation les données **EMG** avec les angles calculés de l’épaule lors des mouvements fonctionnels.
