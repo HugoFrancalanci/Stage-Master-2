@@ -29,7 +29,7 @@ Ce sous-dossier comprend six scripts principaux :
 Ce sous-dossier comprend trois scripts :
 
 - **`main_synergies_1functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour préparer l’extraction des synergies sur un mouvement fonctionnel pour un sujet (10 fonctions associées).
-- **`main_synergies_4functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour l'extraction des synergies sur les quatre mouvements fonctionnels concaténés pour un sujet.
+- **`main_synergies_4functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour l'extraction des synergies sur les quatre mouvements fonctionnels concaténés pour un sujet (12 fonctions associées).
 - **`raisonnement_analyse_synergies`** : Documentation du raisonnement menant à l'extraction et l'interprétation des synergies musculaires.
 
 ---
