@@ -50,11 +50,3 @@ Ce dossier contient un seul sous-dossier :
 
 #### (1) main_couplage
 - Contient un script partiel qui met en corrélation les données **EMG** avec les angles calculés de l’épaule lors des mouvements fonctionnels.
-
-
-- Si vous rencontrez des erreurs ou souhaitez contribuer, merci d’ouvrir une issue sur GitHub.
-
----
-
-## Licence
-Ce projet est sous licence **MIT**. Vous êtes libre de l'utiliser et de le modifier en respectant les termes de la licence.
