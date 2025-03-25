@@ -35,13 +35,16 @@ Ce sous-dossier comprend trois scripts :
 ---
 
 ### 2) KINEMATIC
-Ce dossier est divisé en deux sous-dossiers : **angles_extraits_c3d** et **calcul_angles_euler**.
+Ce dossier est divisé en trois sous-dossiers : **angles_extraits_c3d**, **calcul_angles_euler** et **clustering_strategies_motrices**.
 
 #### (1) angles_extraits_c3d
 - **`angles_c3d_analytics`** : Contient les angles des mouvements analytiques pour un sujet extraits directement à partir des fichiers **C3D**.
 
 #### (2) calcul_angles_euler
 - **`main_analyse_kin`** : Contient les angles calculés avec la méthode d'Euler pour les mouvements fonctionnels d’un sujet.
+
+#### (3) clustering_strategies_motrices
+- **`clustering_strat_motrice`** : identification de stratégies motrices propres aux sujets à l’aide d’un clustering (k-means) basé sur les angles dans le plan d’élévation huméro-thoracique (YXY) lors d’un mouvement fonctionnel.
 
 ---
 
