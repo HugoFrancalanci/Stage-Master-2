@@ -26,7 +26,7 @@ Ce sous-dossier comprend six scripts principaux :
 - **`normalisation`** : Comparaison des différentes méthodes de normalisation des enregistrements des mouvements fonctionnels.
 
 #### (3) SYNERGIES HUGO
-Ce sous-dossier comprend quatres scripts :
+Ce sous-dossier comprend quatre scripts :
 
 - **`main_synergies_1functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour préparer l’extraction des synergies sur un mouvement fonctionnel pour un sujet (10 fonctions associées).
 - **`main_synergies_4functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour l'extraction des synergies sur les quatre mouvements fonctionnels concaténés pour un sujet (12 fonctions associées).
