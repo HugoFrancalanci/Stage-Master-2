@@ -44,7 +44,7 @@ Ce dossier est divisé en trois sous-dossiers : **angles_extraits_c3d**, **calcu
 #### (2) calcul_angles_euler
 - **`solo_functional_kin`** : Contient les angles calculés avec la méthode d'Euler pour un mouvement fonctionnel d’un sujet.
 - **`main_functional_kin`** : Contient les angles calculés avec la méthode d'Euler pour un mouvement fonctionnel de tous les sujets.
-- - **`main_functional_kin_concatenated`** : Contient les angles calculés avec la méthode d'Euler pour les quatre mouvement fonctionnel de tous les sujets.
+- **`main_functional_kin_concatenated`** : Contient les angles calculés avec la méthode d'Euler pour les quatre mouvement fonctionnel de tous les sujets.
 
 #### (3) clustering_strategies_motrices
 - **`clustering_strat_motrice`** : identification de stratégies motrices propres aux sujets à l’aide d’un clustering (k-means) basé sur les angles dans le plan d’élévation huméro-thoracique (YXY) lors d’un mouvement fonctionnel.
