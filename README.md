@@ -84,9 +84,3 @@ Génération et comparaison des profils moyens de synergies et d’activations t
   - **Tests t** pour détecter les différences significatives,
   - **Corrélations de Pearson** pour évaluer la similarité entre profils.
 - Visualisation des résultats statistiques.
-
-### 3) COUPLAGE EMG KINEMATIC (en cours de développement)
-Ce dossier contient un seul sous-dossier :
-
-#### (1) main_couplage
-- **`main_couplage`** : Contient un script partiel qui met en corrélation les données **EMG** avec les angles calculés de l’épaule lors des mouvements fonctionnels.
