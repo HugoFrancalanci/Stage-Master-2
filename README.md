@@ -1,3 +1,7 @@
+![Made with MATLAB](https://img.shields.io/badge/Made%20with-MATLAB-orange)
+![Research Project](https://img.shields.io/badge/Project-Research-blue)
+![License MIT](https://img.shields.io/badge/License-MIT-green)
+
 # STAGE_M2_SYNERGIES
 
 ## Description
