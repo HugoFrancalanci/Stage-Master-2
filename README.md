@@ -1,55 +1,89 @@
 # STAGE_M2_SYNERGIES
 
 ## Description
-Ce dépôt contient les scripts développés pour analyser les synergies musculaires et la cinématique de l'épaule . Il est structuré en trois grands sous-dossiers : **SYNERGY**, **KINEMATIC**, et **COUPLAGE EMG KINEMATIC**.
+Ce dépôt contient les scripts développés pour analyser les synergies musculaires et la cinématique de l'épaule à partir de signaux EMG et d'angles articulaires issus de mouvements fonctionnels.  
+Il est organisé autour de cinq grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING** et **MEAN PROFIL**.  
+Les traitements incluent l'extraction, le nettoyage personnalisé, le traitement complet des signaux EMG et cinématiques, ainsi que l'analyse statistique des profils musculaires et articulaires.
 
 ---
 
-## Organisation des dossiers
-
-### 1) SYNERGY
-Ce dossier est divisé en trois sous-dossiers : **ANALYTIC**, **FUNCTIONAL**, et **SYNERGIES HUGO**.
-
-#### (1) ANALYTIC
-- Contient le script **`solo_analytic_emg`** et une fonction associée.
-- Permet d'extraire et de visualiser les données brutes en valeurs absolues des mouvements analytiques pour un sujet.
-
-#### (2) FUNCTIONAL
-Ce sous-dossier comprend six scripts principaux :
-
-- **`solo_functional_emg`** : Extraction et visualisation des données brutes en valeurs absolues des mouvements fonctionnels (échelle non et normalisée) pour un sujet.
-- **`main_functional_emg`** : Traitement des données de quatre mouvements pour tous les sujets et les deux épaules (13 fonctions associées).
-
-- **`repetition_separation`** : Identification et isolation des trois répétitions dans l’enregistrement des mouvements fonctionnels.
-- **`muscles_patterns`** : Identification des pics d'activation pour chaque cycle dans l’enregistrement des mouvements fonctionnels.
-- **`artefacts_detection`** : Détection des artefacts restants (cardiaques et mouvements) dans l’enregistrement des mouvements fonctionnels.
-- **`normalisation`** : Comparaison des différentes méthodes de normalisation des enregistrements des mouvements fonctionnels.
-
-#### (3) SYNERGIES HUGO
-Ce sous-dossier comprend quatre scripts :
-
-- **`main_synergies_1functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour préparer l’extraction des synergies sur un mouvement fonctionnel pour un sujet (10 fonctions associées).
-- **`main_synergies_4functional`** : Extraction, traitement, segmentation en cycles et formatage des données pour l'extraction des synergies sur les quatre mouvements fonctionnels concaténés pour un sujet (12 fonctions associées).
-- **`profil_global_synergies`** : Intègre un clustering K-means des synergies extraites (matrices W) afin de regrouper les sujets selon la similarité de leurs profils musculaires fonctionnels (1 fonction associée).
-- **`raisonnement_analyse_synergies`** : Documentation du raisonnement menant à l'extraction et l'interprétation des synergies musculaires.
+## Table des matières
+- [1) SYNERGIES](#1-synergies)
+- [2) ELECTROMYOGRAPHY](#2-electromyography)
+- [3) KINEMATIC](#3-kinematic)
+- [4) CLUSTERING](#4-clustering)
+- [5) MEAN PROFIL](#5-mean-profil)
 
 ---
 
-### 2) KINEMATIC
-Ce dossier est divisé en trois sous-dossiers : **angles_extraits_c3d**, **calcul_angles_euler** et **clustering_strategies_motrices**.
+## 1) SYNERGIES
+Préparation des données EMG pour l’analyse des synergies musculaires à partir des mouvements fonctionnels.  
+Divisé en deux sous-dossiers :
 
-#### (1) angles_extraits_c3d
-- **`angles_c3d_analytics`** : Contient les angles des mouvements analytiques pour un sujet extraits directement à partir des fichiers **C3D**.
+### 1.1) solo_functional
+- Traitement d'**un seul mouvement fonctionnel** pour **un sujet**.
+- Extraction, traitement et formatage des signaux EMG pour un mouvement fonctionnel isolé.
 
-#### (2) calcul_angles_euler
-- **`solo_functional_kin`** : Contient les angles calculés avec la méthode d'Euler pour un mouvement fonctionnel d’un sujet.
-- **`main_functional_kin`** : Contient les angles calculés avec la méthode d'Euler pour un mouvement fonctionnel de tous les sujets.
-- **`main_functional_kin_concatenated`** : Contient les angles calculés avec la méthode d'Euler pour les quatre mouvement fonctionnel de tous les sujets.
-
-#### (3) clustering_strategies_motrices
-- **`clustering_strat_motrice`** : identification de stratégies motrices propres aux sujets à l’aide d’un clustering (k-means) basé sur les angles dans le plan d’élévation huméro-thoracique (YXY) lors d’un mouvement fonctionnel.
+### 1.2) main_functional
+- Traitement de **tous les mouvements fonctionnels combinés** pour **un sujet**.
+- Extraction, traitement, concaténation des signaux EMG.
+- Application d'un **nettoyage personnalisé du signal** avant l'analyse des synergies.
 
 ---
+
+## 2) ELECTROMYOGRAPHY
+Analyse complète des activations musculaires extraites des mouvements analytiques et fonctionnels.  
+Divisé en deux sous-dossiers :
+
+### 2.1) Analytic
+- Analyse des mouvements **analytiques** d'un sujet.
+- Extraction et traitement des signaux EMG bruts de mouvements de référence simples.
+
+### 2.2) Functional
+- Analyse complète des mouvements **fonctionnels** :
+  - **Filtrage** passe-bande,
+  - **Rectification** du signal,
+  - **Lissage** (calcul RMS),
+  - **Normalisation** des activations,
+  - Calcul des **profils moyens** d'activation,
+  - Calcul du **rapport signal/bruit (SNR)**,
+  - Calcul des **ratios d'activation musculaire**.
+
+---
+
+## 3) KINEMATIC
+Traitement de la cinématique de l'épaule à partir des données de mouvements fonctionnels.  
+Contient un sous-dossier :
+
+### 3.1) Main
+- Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**.
+- Correction des discontinuités angulaires et recentrage des mouvements.
+- Comparaison statistique des angles articulaires entre différentes populations via **SPM1D**.
+
+---
+
+## 4) CLUSTERING
+Regroupement des sujets selon des critères cinématiques ou synergiques.  
+Divisé en deux sous-dossiers :
+
+### 4.1) Kinematic clustering
+- **Clustering** des courbes d'**élévation huméro-thoracique**.
+- Méthodes utilisées : **k-means** et **analyse en composantes principales (PCA)**.
+
+### 4.2) Synergies clustering
+- **Clustering** des **vecteurs de synergies** musculaires et des **profils d'activation temporels**.
+- Méthodes utilisées : **k-means** et **PCA**.
+
+---
+
+## 5) MEAN PROFIL
+Génération et comparaison des profils moyens de synergies et d’activations temporelles entre populations :
+
+- Calcul des **profils moyens** des **vecteurs de synergies** et des **activations temporelles**.
+- Comparaison entre différentes populations via :
+  - **Tests t** pour détecter les différences significatives,
+  - **Corrélations de Pearson** pour évaluer la similarité entre profils.
+- Visualisation des résultats statistiques.
 
 ### 3) COUPLAGE EMG KINEMATIC (en cours de développement)
 Ce dossier contient un seul sous-dossier :
