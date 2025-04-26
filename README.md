@@ -25,11 +25,11 @@ Ce dépôt est organisé autour de cinq grands dossiers principaux : **SYNERGIES
 Préparation des données EMG pour l’analyse des synergies musculaires à partir des mouvements fonctionnels.  
 Divisé en deux sous-dossiers :
 
-### 1.1) solo_functional
+### 1.1) solo_functional (10 fonctions)
 - Traitement d'**un seul mouvement fonctionnel** pour **un sujet**.
 - Extraction, traitement et formatage des signaux EMG pour un mouvement fonctionnel isolé.
 
-### 1.2) main_functional
+### 1.2) main_functional (14 fonctions)
 - Traitement de **tous les mouvements fonctionnels combinés** pour **un sujet**.
 - Extraction, traitement, concaténation des signaux EMG.
 - Application d'un **nettoyage personnalisé du signal** avant l'analyse des synergies.
@@ -40,11 +40,11 @@ Divisé en deux sous-dossiers :
 Analyse complète des activations musculaires extraites des mouvements analytiques et fonctionnels.  
 Divisé en deux sous-dossiers :
 
-### 2.1) Analytic
+### 2.1) Analytic (1 fonction)
 - Analyse des mouvements **analytiques** d'un sujet.
 - Extraction et traitement des signaux EMG bruts de mouvements de référence simples.
 
-### 2.2) Functional
+### 2.2) Functional (18 fonctions)
 - Analyse complète des mouvements **fonctionnels** :
   - **Filtrage** passe-bande,
   - **Rectification** du signal,
@@ -60,7 +60,7 @@ Divisé en deux sous-dossiers :
 Traitement de la cinématique de l'épaule à partir des données de mouvements fonctionnels.  
 Contient un sous-dossier :
 
-### 3.1) Main
+### 3.1) Main (35 fonctions)
 - Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**.
 - Correction des discontinuités angulaires et recentrage des mouvements.
 - Comparaison statistique des angles articulaires entre différentes populations via **SPM1D**.
@@ -71,11 +71,11 @@ Contient un sous-dossier :
 Regroupement des sujets selon des critères cinématiques ou synergiques.  
 Divisé en deux sous-dossiers :
 
-### 4.1) Kinematic clustering
+### 4.1) Kinematic clustering (2 fonctions)
 - **Clustering** des courbes d'**élévation huméro-thoracique**.
 - Méthodes utilisées : **k-means** et **analyse en composantes principales (PCA)**.
 
-### 4.2) Synergies clustering
+### 4.2) Synergies clustering (2 fonctions)
 - **Clustering** des **vecteurs de synergies** musculaires et des **profils d'activation temporels**.
 - Méthodes utilisées : **k-means** et **PCA**.
 
