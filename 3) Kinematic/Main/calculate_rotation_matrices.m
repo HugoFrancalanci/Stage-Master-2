@@ -5,7 +5,7 @@ function [R_HT, R_ST, R_GH] = calculate_rotation_matrices(Xt, Yt, Zt, Xs, Ys, Zs
     Rs = [Xs', Ys', Zs'];
     Rh = [Xh', Yh', Zh'];
     
-    % Correction orthonormalité (A^T=A = I)
+    % Correction orthonormalité (A^T*A = I)
     % Utilisation de "svd" pour garantir que les matrices R sont orthogonales
     [Ut,~,Vt] = svd(Rt); Rt = Ut * Vt';
     [Us,~,Vs] = svd(Rs); Rs = Us * Vs';
