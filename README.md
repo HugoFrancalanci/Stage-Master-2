@@ -2,7 +2,7 @@
 ![Research Project](https://img.shields.io/badge/Project-Research-blue)
 ![License MIT](https://img.shields.io/badge/License-MIT-green)
 
-# STAGE_M2_SYNERGIES
+# STAGE MASTER 2
 
 ## Description
 Ce dépôt contient les scripts de traitement et d'analyse développés dans le cadre d'une étude portant sur l'**effet d'une arthroplastie totale inversée d'épaule** sur les **synergies musculaires** et la **cinématique articulaire**.  
