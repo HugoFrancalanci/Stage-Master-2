@@ -1,9 +1,14 @@
 # STAGE_M2_SYNERGIES
 
 ## Description
-Ce dépôt contient les scripts développés pour analyser les synergies musculaires et la cinématique de l'épaule à partir de signaux EMG et d'angles articulaires issus de mouvements fonctionnels.  
-Il est organisé autour de cinq grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING** et **MEAN PROFIL**.  
-Les traitements incluent l'extraction, le nettoyage personnalisé, le traitement complet des signaux EMG et cinématiques, ainsi que l'analyse statistique des profils musculaires et articulaires.
+Ce dépôt contient les scripts de traitement et d'analyse développés dans le cadre d'une étude portant sur l'**effet d'une arthroplastie totale inversée d'épaule** sur les **synergies musculaires** et la **cinématique articulaire**.  
+Le projet vise à :
+- Traiter les données EMG et cinématiques de patients avant et après chirurgie, ainsi que de sujets asymptomatiques ;
+- Extraire et comparer les **synergies musculaires** (coordination inter-musculaire) ;
+- Analyser la cinématique articulaire huméro-thoracique, scapulo-thoracique et gléno-humérale ;
+- Effectuer des comparaisons statistiques inter-groupes via des tests t, des analyses de clustering et des analyses de similarité.
+
+Ce dépôt est organisé autour de cinq grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING** et **MEAN PROFIL**.  
 
 ---
 
