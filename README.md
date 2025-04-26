@@ -66,7 +66,7 @@ Contient un sous-dossier :
 
 ### 3.1) Main (35 fonctions)
 - Analyse cinémtique effectuée selon les recommendations de la société internationale de biomécanique (Wu el al. 2005) à l'aide des marqueurs cinématiques Qualysis
-- Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**..
+- Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**.
 - Comparaison statistique des angles articulaires entre différentes populations via **SPM1D**.
 
 ---
