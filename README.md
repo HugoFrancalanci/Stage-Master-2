@@ -32,7 +32,7 @@ Divisé en deux sous-dossiers :
 ### 1.2) main_functional (14 fonctions)
 - Traitement de **tous les mouvements fonctionnels combinés** pour **un sujet**.
 - Extraction, traitement, concaténation des signaux EMG.
-- Application d'un **nettoyage personnalisé du signal** avant l'analyse des synergies.
+- Application d'un **nettoyage personnalisé du signal** (population pathologique) avant l'analyse des synergies.
 
 ---
 
@@ -42,16 +42,16 @@ Divisé en deux sous-dossiers :
 
 ### 2.1) Analytic (1 fonction)
 - Analyse des mouvements **analytiques** d'un sujet.
-- Extraction et traitement des signaux EMG bruts de mouvements de référence simples.
+- Extraction des signaux EMG bruts de mouvements de référence simples.
 
 ### 2.2) Functional (18 fonctions)
 - Analyse complète des mouvements **fonctionnels** :
-  - **Filtrage** passe-bande,
-  - **Rectification** du signal,
-  - **Lissage** (calcul RMS),
-  - **Normalisation** des activations,
+  - **Filtrage** passe-bande (15-475 Hz),
+  - **Rectification** du signal (full-wave),
+  - **Lissage** (Root Mean Square),
+  - **Normalisation** des activations (sous-tâches maximales normalisées),
   - Calcul des **profils moyens** d'activation,
-  - Calcul du **rapport signal/bruit (SNR)**,
+  - Calcul du **rapport signal/bruit**,
   - Calcul des **ratios d'activation musculaire**.
 
 ---
@@ -61,8 +61,8 @@ Traitement de la cinématique de l'épaule à partir des données de mouvements 
 Contient un sous-dossier :
 
 ### 3.1) Main (35 fonctions)
-- Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**.
-- Correction des discontinuités angulaires et recentrage des mouvements.
+- Analyse cinémtique effectuée selon les recommendations de la société internationale de biomécanique (Wu el al. 2005) à l'aide des marqueurs cinématiques Qualysis
+- Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**..
 - Comparaison statistique des angles articulaires entre différentes populations via **SPM1D**.
 
 ---
@@ -73,11 +73,11 @@ Divisé en deux sous-dossiers :
 
 ### 4.1) Kinematic clustering (2 fonctions)
 - **Clustering** des courbes d'**élévation huméro-thoracique**.
-- Méthodes utilisées : **k-means** et **analyse en composantes principales (PCA)**.
+- Méthodes utilisées : **k-means**, **méthode du coude** et **analyse en composantes principales (PCA)**.
 
 ### 4.2) Synergies clustering (2 fonctions)
 - **Clustering** des **vecteurs de synergies** musculaires et des **profils d'activation temporels**.
-- Méthodes utilisées : **k-means** et **PCA**.
+- Méthodes utilisées : **k-means**, **méthode du coude** et **PCA**.
 
 ---
 
