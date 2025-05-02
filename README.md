@@ -58,7 +58,7 @@ Divisé en deux sous-dossiers :
   - Calcul du **rapport signal/bruit**,
   - Calcul des **ratios d'activation musculaire**,
   - Option pour calculer **tous les mouvements combinés**
-  - Analyse statistique SPM1D pour **comparer les courbes d'activation entre les groupes** (en cours).
+  - Analyse statistique SPM1D pour **comparer les courbes d'activation entre les groupes**.
 ---
 
 ## 3) KINEMATIC
