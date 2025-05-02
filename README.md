@@ -48,7 +48,7 @@ Divisé en deux sous-dossiers :
 - Analyse des mouvements **analytiques** d'un sujet.
 - Extraction des signaux EMG bruts de mouvements de référence simples.
 
-### 2.2) Functional (23 fonctions)
+### 2.2) Functional (25 fonctions)
 - Analyse complète des mouvements **fonctionnels** :
   - **Filtrage** passe-bande (15-475 Hz),
   - **Rectification** du signal (full-wave),
