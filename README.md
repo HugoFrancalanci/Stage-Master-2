@@ -98,7 +98,7 @@ Comparaison des profils moyens extraits de l’analyse des synergies musculaires
 
 ### 5.2) Comparaison_SYN
 - Comparaison des **poids musculaires (W)** et **activations (H)** par **ANOVA suivi de post-hoc**.
-- Corrélations de Pearson, figures synthétiques, barplots et courbes.
+- Corrélations de Pearson, barplots et courbes.
 
 ---
 
