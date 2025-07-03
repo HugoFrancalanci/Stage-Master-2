@@ -109,7 +109,7 @@ Analyse individualisée des profils EMG, cinématiques et synergiques.
 - Comparaison des **pics EMG** entre groupes, par muscle et sujet.
 
 ### 6.2) Kinematic
-- Comparaison des **pics et amplitudes huméro-thoracique** entre groupes.
+- Comparaison des **pics et amplitudes huméro-thoracique** entre groupes et sujet.
 
 ### 6.3) Synergy
 - Calcul de la **similarité cosinus** entre chaque synergie individuelle et le profil de référence asymptomatique.
