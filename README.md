@@ -10,9 +10,9 @@ Le projet vise à :
 - Traiter les données électromyographiques et cinématiques de patients avant et après chirurgie, ainsi que de sujets asymptomatiques ;
 - Extraire et comparer les **synergies musculaires** (coordination inter-musculaire) ;
 - Analyser la cinématique articulaire huméro-thoracique, scapulo-thoracique et gléno-humérale ;
-- Effectuer des comparaisons statistiques inter-groupes via des tests t, des analyses de clustering et des analyses de similarité.
+- Effectuer des comparaisons statistiques inter-groupes via des ANOVA, tests t, des analyses de clustering, SPM1D et de similarité cosinus.
 
-Ce dépôt est organisé autour de cinq grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING** et **MEAN PROFIL**.  
+Ce dépôt est organisé autour de six grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING**, **MEAN PROFIL** et **INDIVIDUAL ANALYSIS**. Une notice d'utilisation (en français) permettant de détailler chaque dossier et fonction utilisée est également disponible.
 
 ---
 
@@ -22,6 +22,7 @@ Ce dépôt est organisé autour de cinq grands dossiers principaux : **SYNERGIES
 - [3) KINEMATIC](#3-kinematic)
 - [4) CLUSTERING](#4-clustering)
 - [5) MEAN PROFIL](#5-mean-profil)
+- [6) INDIVIDUAL ANALYSIS](#6-individual-analysis)
 
 ---
 
@@ -29,68 +30,83 @@ Ce dépôt est organisé autour de cinq grands dossiers principaux : **SYNERGIES
 Préparation des données EMG pour l’analyse des synergies musculaires à partir des mouvements fonctionnels.  
 Divisé en deux sous-dossiers :
 
-### 1.1) solo_functional (10 fonctions)
+### 1.1) solo_functional
 - Traitement d'**un seul mouvement fonctionnel** pour **un sujet**.
-- Extraction, traitement et formatage des signaux EMG pour un mouvement fonctionnel isolé.
+- Extraction, traitement et normalisation EMG.
+- Découpage automatique en **3 cycles** via le marqueur RHLE (coude).
+- Nettoyage du signal, visualisation et export de la matrice EMG traitée.
 
-### 1.2) main_functional (14 fonctions)
-- Traitement de **tous les mouvements fonctionnels combinés** pour **un sujet**.
-- Extraction, traitement, concaténation des signaux EMG.
-- Application d'un **nettoyage personnalisé du signal** (population pathologique) avant l'analyse des synergies.
+### 1.2) main_functional
+- Traitement de **4 mouvements fonctionnels combinés** (12 cycles).
+- Découpage manuel possible, nettoyage des artefacts (écart-type).
+- Assemblage de tous les signaux EMG dans une matrice globale concaténée.
 
 ---
 
 ## 2) ELECTROMYOGRAPHY
-Analyse complète des activations musculaires extraites des mouvements analytiques et fonctionnels.  
-Divisé en deux sous-dossiers :
+Analyse des activations musculaires issues des mouvements analytiques et fonctionnels.  
+Organisé en plusieurs sous-dossiers :
 
-### 2.1) Analytic (1 fonction)
-- Analyse des mouvements **analytiques** d'un sujet.
-- Extraction des signaux EMG bruts de mouvements de référence simples.
+### 2.1) Analytic
+- Affichage des signaux bruts normalisés issus des mouvements de référence.
 
-### 2.2) Functional (25 fonctions)
-- Analyse complète des mouvements **fonctionnels** :
-  - **Filtrage** passe-bande (15-475 Hz),
-  - **Rectification** du signal (full-wave),
-  - **Lissage** (Root Mean Square),
-  - **Normalisation** des activations (sous-tâches maximales normalisées),
-  - Calcul des **profils moyens** d'activation,
-  - Calcul du **rapport signal/bruit**,
-  - Calcul des **ratios d'activation musculaire**,
-  - Option pour calculer **tous les mouvements combinés**
-  - Analyse statistique SPM1D pour **comparer les courbes d'activation entre les groupes**.
+### 2.2) Functional
+- **Filtrage**, **rectification**, **lissage RMS**, **normalisation** (via tâches analytiques).
+- Nettoyage des artefacts, détection de l'activité du dentelé antérieur (artefacts cardiaque).
+- Calcul des **ratios musculaires**, **rapport signal/bruit**, et **profils moyens**.
+- Préparation à l'analyse **SPM1D** sur signaux moyens combinés.
+
 ---
 
 ## 3) KINEMATIC
-Traitement de la cinématique de l'épaule à partir des données de mouvements fonctionnels.  
-Contient un sous-dossier :
+Analyse cinématique de l'épaule à l'aide de la méthode d'Euler.  
 
-### 3.1) Main (35 fonctions)
-- Analyse cinémtique effectuée selon les recommendations de la société internationale de biomécanique (Wu el al. 2005) à l'aide des marqueurs cinématiques Qualysis
-- Extraction et calcul des **angles articulaires** huméro-thoraciques, scapulo-thoraciques et gléno-huméraux selon la **méthode d'Euler**.
-- Comparaison statistique des angles articulaires entre différentes populations via **SPM1D**.
+### 3.1) Main
+- Extraction des angles gléno-huméral, scapulo-thoracique et huméro-thoracique selon Wu et al. 2005 à partir des marqueurs Qualisys.
+- Détection et validation des cycles, centrage, correction et filtrage des angles.
+- Calcul des **moyennes globales**, **pics**, **amplitudes** et **vitesses**.
+- Comparabilité inter-côtés (entre épaule gauche et droite).
+
+### 3.2) Plot_kin
+- Tracé des **courbes moyennes d’élévation HT**.
+- Comparaison inter-groupes par **SPM1D**.
 
 ---
 
 ## 4) CLUSTERING
-Regroupement des sujets selon des critères cinématiques ou synergiques.  
-Divisé en deux sous-dossiers :
+Méthodes de regroupement des données EMG et cinématiques.
 
-### 4.1) Kinematic clustering (2 fonctions)
-- **Clustering** des courbes d'**élévation huméro-thoracique**.
-- Méthodes utilisées : **k-means**, **méthode du coude** et **analyse en composantes principales (PCA)**.
+### 4.1) Kinematic clustering
+- Clustering des courbes d'**élévation HT** par k-means.
+- Sélection automatique du nombre de clusters via la **méthode du coude**.
 
-### 4.2) Synergies clustering (2 fonctions)
-- **Clustering** des **vecteurs de synergies** musculaires et des **profils d'activation temporels**.
-- Méthodes utilisées : **k-means**, **méthode du coude** et **PCA**.
+### 4.2) Synergies clustering
+- Clustering des vecteurs **W** (synergies musculaires) et **H** (activations temporelles).
+- Application combinée de **PCA** et **k-means**.
 
 ---
 
 ## 5) MEAN PROFIL
-Génération et comparaison des profils moyens de synergies et d’activations temporelles entre populations :
+Comparaison des profils moyens extraits de l’analyse des synergies musculaires.
 
-- Calcul des **profils moyens** des **vecteurs de synergies** et des **activations temporelles**.
-- Comparaison entre différentes populations via :
-  - **Tests t** pour détecter les différences significatives,
-  - **Corrélations de Pearson** pour évaluer la similarité entre profils.
-- Visualisation des résultats statistiques.
+### 5.1) Comparaison_VAF
+- Comparaison des **valeurs de VAF** entre groupes.
+- Calcul du **d de Cohen** en post-hoc.
+
+### 5.2) Comparaison_SYN
+- Comparaison des **poids musculaires (W)** et **activations (H)** par **ANOVA suivi de post-hoc**.
+- Corrélations de Pearson, figures synthétiques, barplots et courbes.
+
+---
+
+## 6) INDIVIDUAL ANALYSIS
+Analyse individualisée des profils EMG, cinématiques et synergiques.
+
+### 6.1) Electromyography
+- Comparaison des **pics EMG** entre groupes, par muscle et sujet.
+
+### 6.2) Kinematic
+- Comparaison des **pics et amplitudes huméro-thoracique** entre groupes.
+
+### 6.3) Synergy
+- Calcul de la **similarité cosinus** entre chaque synergie individuelle et le profil de référence asymptomatique.
