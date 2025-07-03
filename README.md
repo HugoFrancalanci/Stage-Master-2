@@ -56,8 +56,8 @@ Organisé en plusieurs sous-dossiers :
 - **Lissage** (Root Mean Square),
 - **Normalisation** des activations (sous-tâches maximales normalisées),
 - Calcul des **profils moyens** d'activation, du **rapport signal/bruit** et **ratios d'activation musculaire**,
-- Nettoyage des artefacts, détection de l'activité du dentelé antérieur (artefacts cardiaque).
-- Calcul des **ratios musculaires**, **rapport signal/bruit**, et **profils moyens**.
+- Nettoyage des artefacts et détection de l'activité du dentelé antérieur (artefacts cardiaque).
+- Calcul des **ratios musculaires**, **rapport signal/bruit** et **profils moyens**.
 - Préparation à l'analyse **SPM1D** sur signaux moyens combinés.
   
 ---
@@ -66,7 +66,7 @@ Organisé en plusieurs sous-dossiers :
 Analyse cinématique de l'épaule à l'aide de la méthode d'Euler.  
 
 ### 3.1) Main
-- Extraction des angles gléno-huméral, scapulo-thoracique et huméro-thoracique selon Wu et al. 2005 à partir des marqueurs Qualisys.
+- Extraction des angles gléno-huméral, scapulo-thoracique et huméro-thoracique selon l'international society of biomechanics (Wu et al. 2005) à partir des marqueurs Qualisys.
 - Détection et validation des cycles, centrage, correction et filtrage des angles.
 - Calcul des **moyennes globales**, **pics**, **amplitudes** et **vitesses**.
 - Comparabilité inter-côtés (entre épaule gauche et droite).
@@ -78,7 +78,7 @@ Analyse cinématique de l'épaule à l'aide de la méthode d'Euler.
 ---
 
 ## 4) CLUSTERING
-Méthodes de regroupement des données EMG et cinématiques.
+Méthodes de regroupement des données électromyographiques et cinématiques.
 
 ### 4.1) Kinematic clustering
 - Clustering des courbes d'**élévation HT** par k-means.
