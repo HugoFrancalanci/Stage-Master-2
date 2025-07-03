@@ -12,7 +12,7 @@ Le projet vise à :
 - Analyser la cinématique articulaire huméro-thoracique, scapulo-thoracique et gléno-humérale ;
 - Effectuer des comparaisons statistiques inter-groupes via des ANOVA, tests t, des analyses de clustering, SPM1D et de similarité cosinus.
 
-Ce dépôt est organisé autour de six grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING**, **MEAN PROFIL** et **INDIVIDUAL ANALYSIS**. Une notice d'utilisation (en français) permettant de détailler chaque dossier et fonction utilisée est également disponible.
+Ce dépôt est organisé autour de six grands dossiers principaux : **SYNERGIES**, **ELECTROMYOGRAPHY**, **KINEMATIC**, **CLUSTERING**, **MEAN PROFIL** et **INDIVIDUAL ANALYSIS**. Une notice d'utilisation (en français) permettant de détailler chaque dossiers (6), fichiers (19) et fonctions (104) utilisées est également disponible.
 
 ---
 
