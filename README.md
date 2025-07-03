@@ -51,11 +51,15 @@ Organisé en plusieurs sous-dossiers :
 - Affichage des signaux bruts normalisés issus des mouvements de référence.
 
 ### 2.2) Functional
-- **Filtrage**, **rectification**, **lissage RMS**, **normalisation** (via tâches analytiques).
+- **Filtrage** passe-bande (15-475 Hz),
+- **Rectification** du signal (full-wave),
+- **Lissage** (Root Mean Square),
+- **Normalisation** des activations (sous-tâches maximales normalisées),
+- Calcul des **profils moyens** d'activation, du **rapport signal/bruit** et **ratios d'activation musculaire**,
 - Nettoyage des artefacts, détection de l'activité du dentelé antérieur (artefacts cardiaque).
 - Calcul des **ratios musculaires**, **rapport signal/bruit**, et **profils moyens**.
 - Préparation à l'analyse **SPM1D** sur signaux moyens combinés.
-
+  
 ---
 
 ## 3) KINEMATIC
@@ -90,8 +94,7 @@ Méthodes de regroupement des données EMG et cinématiques.
 Comparaison des profils moyens extraits de l’analyse des synergies musculaires.
 
 ### 5.1) Comparaison_VAF
-- Comparaison des **valeurs de VAF** entre groupes.
-- Calcul du **d de Cohen** en post-hoc.
+- Comparaison des **valeurs de variance accounted for (VAF)** entre groupes.
 
 ### 5.2) Comparaison_SYN
 - Comparaison des **poids musculaires (W)** et **activations (H)** par **ANOVA suivi de post-hoc**.
